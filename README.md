@@ -2,6 +2,8 @@
 Programming Udacity's car simulator to follow a given trajectory
 
 ---
+![sim](./img/Capture.JPG "The Model")
+
 
 ## Overview
 The objective of this project is to code the MPC (model predictive controller), to control a simulated car along a simulated trajectory as close as possible.

@@ -20,7 +20,7 @@ double dt = 0.1;
 //
 // This is the length from front to CoG that has a similar radius.
 const double Lf = 2.67;
-double ref_v = 100;
+double ref_v = 50;
 
 // The solver takes all the state variables and actuator
 // variables in a singular vector. Thus, we should to establish
@@ -65,7 +65,7 @@ class FG_eval {
     for(size_t i=0; i<N; i++) {
       fg[0] += CppAD::pow(vars[cte_start+i], 2)/500.0 ;
       fg[0] += CppAD::pow(vars[epsi_start+i], 2);
-      //fg[0] += CppAD::pow(vars[v_start+i]-ref_v, 2);
+      fg[0] += CppAD::pow(vars[v_start+i]-ref_v, 2);
 
     }
     for(size_t t=0; t<N-1; t++) {
